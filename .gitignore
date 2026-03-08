@@ -1,0 +1,27 @@
+# Compiled Object files
+*.o
+*.obj
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Dev-C++ specific files
+*.layout
+*.win
+*.dev
+Makefile.win
+
+# Debugging files
+*.ilk
+*.pdb
+*.exp
+
+# Operating System files
+Thumbs.db
+.DS_Store
+
+# Temporary files
+*.bak
+*.tmp
