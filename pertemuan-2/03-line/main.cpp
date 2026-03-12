@@ -6,9 +6,9 @@ void Garis(void) {
     glLineWidth(2.0f); 
     
     glBegin(GL_LINES);
-        glColor3f(1.0f, 1.0f, 1.0f); // Warna putih 
-        glVertex3f(0.00, 0.20, 0.0); // Titik atas 
-        glVertex3f(0.00, -0.20, 0.0); // Titik bawah 
+    glColor3f(1.0f, 1.0f, 1.0f); // Warna putih 
+    glVertex3f(0.00, 0.20, 0.0); // Titik atas 
+    glVertex3f(0.00, -0.20, 0.0); // Titik bawah 
     glEnd(); 
     
     glFlush(); 

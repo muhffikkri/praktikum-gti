@@ -7,10 +7,10 @@ void point(void) {
     
     // Prosedur menggambar titik 
     glBegin(GL_POINTS); 
-        // Warna merah (RGB) 
-        glColor3f(1.0f, 0.0f, 0.0f); 
-        // Posisi titik (X, Y, Z) 
-        glVertex3f(0.25, 0.25, 0.0);
+    // Warna merah (RGB) 
+    glColor3f(1.0f, 0.0f, 0.0f); 
+    // Posisi titik (X, Y, Z) 
+    glVertex3f(0.25, 0.25, 0.0);
     glEnd(); 
     
     glFlush();
