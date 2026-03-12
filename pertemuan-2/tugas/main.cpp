@@ -37,7 +37,7 @@ void displayPrimitif(void) {
 int main(int argc, char** argv) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_SINGLE | GLUT_RGBA);
-    glutInitWindowSize(800, 800);
+    glutInitWindowSize(600, 600);
     glutCreateWindow("Latihan Pertemuan 2");
     glutDisplayFunc(displayPrimitif);
     glClearColor(0.1f, 0.1f, 0.2f, 1.0f);
