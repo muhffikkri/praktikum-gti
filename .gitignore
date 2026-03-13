@@ -1,18 +1,3 @@
-# Compiled Object files
-*.o
-*.obj
-
-# Executables
-*.exe
-*.out
-*.app
-
-# Dev-C++ specific files
-*.layout
-*.win
-*.dev
-Makefile.win
-
 # Debugging files
 *.ilk
 *.pdb
