@@ -9,10 +9,14 @@ static int palm = 0, finger = 0;
 /**
  * Penjelasan cara kerja 
  * Ada 4 transformasi yang terjadi
- * 1. Transformasi bahu: pergerakan bahu dimulai paling awal dan 
- * 2. Transformasi siku
- * 3. Transformasi telapak tangan
- * 4. Transformasi jari 
+ * 1. koordinat dari dunia disimpan terlebih dahulu pada glPushMatrix. Koordinat tersebut ditranslasikan pada sumbu x sejauh -1, kemudian bahu akan dirotasikan pada sumbu tersebut sebesar variabel yang diubah dengan keyboard. Koordinat dikembalikan lagi ke titik asal. 
+ * 2. koordinat dari bahu disimpan terlebih dahulu kemudian menyiapkan gambar lengan atas dengan glScaelf sebesar x: 2, y: 4, dan z: 1. Setelah lengan atas digambar maka kembali lagi ke koordinat bahu.
+ * 3. Pindah kembali ke ujung lengan atas (siku) dan gerakan siku dengan glRotatef sebesar variabel yang diubah dengan keyboard. Translasikan untuk menyiapkan koordinat membuat lengan bawah
+ * 4. Simpan koordinat siku dan gambar lengan bawah sebesar x: 2, y: 4, dan z: 1. Gambar lengan bawah dan kembali ke siku
+ * 5. Pindah ke ujung lengan bawah dan rotasi kan telapak tangan, translasi sejauh 0.25 pada sumbu x untuk menyiapkan posisi gambar telapak tangan. Gambar telapak tangan dan kembali ke koordinat bahu
+ * 6. Pindah ke ujung telapak tangan dan gunakan for loop untuk menggambar jari. Pertama, koordinat ditranslasikan pada sumbu z dari -0.35 hingga 0.35. Kemudian tiap tiap koordinat tersebut akan digambar jari sebesar x: 0.4 y: 0.15, dan z: 0.2
+ * 7. Matriks kemudian dikembalikan lagi satu persatu hingga ke koordinat dunia dengan glPopMatrix
+ * 8. Pada kode ini juga menggunakan glutSwapBuffers dan glutPostRedisplay agar canvas bisa digambar terus menerus ketika terjadi perubahan
  */
 
 void display(void) {
