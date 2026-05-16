@@ -184,3 +184,11 @@ int main(int argc, char** argv) {
 	return 0;
 }
 
+// Alur/cara kerja tekstur
+// dimulai dari load image terlebih dahulu dan memberikan texture tersebut sebuah id
+// kemudian texture diload pada saat inisialisasi rendering
+// lakukan transformasi geometri yang dibutuhkan dan menggambar kubus seperti biasa dengan glbegin
+// namun sebelum glbegin, aktifkan terlebih dahulu texture dengan glenable(gl_texture_2d)
+// tempelkan texture saat ini dengan id texture yang sudah diset sebelumnya dengan texture yang diload
+// setelah di-bind texture nya, texture difilter pada gltexparameter yang berfungsi untuk 
+// mengatur bagaimana texture ditampilkan saat jauh atau dekat dengan layar
